@@ -1,7 +1,7 @@
-# ----------------------------------------------------------------------------------------------------------------------
+# ------------------
 # REQUIRE A SPECIFIC TERRAFORM VERSION OR HIGHER
 # This module is written with 0.12 syntax, which means it is not compatible with any versions below 0.12.
-# ----------------------------------------------------------------------------------------------------------------------
+# --------------------
 
 terraform {
   required_version = ">= 0.12"
@@ -10,11 +10,12 @@ terraform {
 
 ####### RHEL VM ##########
 
-resource "aws_instance" "web" {
-  ami           = data.aws_ami.ubuntu.id
-  instance_type = "t3.micro"
+resource "aws_instance" "vm" {
+  count = var.number_of_instances
+  ami           = var.ami_id
+  instance_type = var.instance_type
 
   tags = {
-    Name = "HelloWorld"
+    Name = "VM.${count.index}"
   }
 }

@@ -10,5 +10,9 @@ variable "Number_of_Instances" {
 
 variable "Instance_Type" {
   type = list(string)
-  default = ["t2.micro"]
+  default = ["t2.micro","t2.medium"]
+}
+
+variable "Ami_Id" {
+  default = "ami-1c4a4566"
 }
