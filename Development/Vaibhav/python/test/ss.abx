@@ -1,0 +1,15 @@
+---
+exportVersion: "1"
+exportId: "first"
+name: "ss"
+runtime: "python"
+entrypoint: "handler"
+inputs:
+  target: "World"
+timeoutSeconds: 600
+deploymentTimeoutSeconds: 900
+dependencies: "bcrypt==3.2.0\r\ncertifi==2020.12.5\r\ncffi==1.14.4\r\nchardet==4.0.0\r\
+  \ncryptography==3.3.1\r\nidna==2.10\r\nparamiko==2.7.2\r\npycparser==2.20\r\nPyNaCl==1.4.0\r\
+  \nrequests==2.25.1\r\nsix==1.15.0\r\nurllib3==1.26.2\r\n"
+actionType: "SCRIPT"
+memoryInMB: 300
