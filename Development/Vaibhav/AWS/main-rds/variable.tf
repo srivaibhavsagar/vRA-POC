@@ -49,6 +49,5 @@ variable "RDS_PASSWORD" {
 }
 
 variable "FINAL_SNAPSHOT" {
-  type = boolean
   default = true
 }

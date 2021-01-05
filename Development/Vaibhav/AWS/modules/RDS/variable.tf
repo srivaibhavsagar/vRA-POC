@@ -49,6 +49,5 @@ variable "rds_password" {
 }
 
 variable "final_snapshot"{
-    type = boolean
     default = true
 }
